@@ -77,9 +77,12 @@ if __name__ == "__main__":
         while True:
             #Get the block hit events
             blockHits = mc.events.pollBlockHits()
+
             # if a block has been hit
             if blockHits:
-                print3D("seven_segment.csv", blockHits[0].pos.x, blockHits[0].pos.y, blockHits[0].pos.z)
+                print3D("seven_segment.csv", blockHits[0].pos.x,
+                                             blockHits[0].pos.y,
+                                             blockHits[0].pos.z)
                 break
             #sleep for a short time
             time.sleep(0.1)

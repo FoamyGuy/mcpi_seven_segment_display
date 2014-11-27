@@ -59,9 +59,35 @@ class McPin:
 
 
 """
-Normally we will use McPin from another script. But you can put code to test it here if you like.
+Normally we will use McPin from another script.
+But you can put code to test it here if you like.
 """
 if __name__ == "__main__":
+    import time
+
     mc = minecraft.Minecraft.create()
-    test_pin = McPin(mc, "test", 1, vec3.Vec3(-112, 0, 65))
-    test_pin.write_pin(0)
+    player_pos = mc.player.getTilePos()
+
+    # create a block for our pin to sit on top of.
+    mc.setBlock(player_pos.x, player_pos.y, player_pos.z + 1, 22)
+
+    # create our pin on top of the block
+    test_pin = McPin(mc, "test", 1, vec3.Vec3(player_pos.x,
+                                              player_pos.y+1,
+                                              player_pos.z+1))
+
+    # set the pin to HIGH
+    test_pin.write_pin(1)
+    old_val = 1
+
+    # When the pin changes value post it to chat.
+    try:
+        while True:
+            new_val = test_pin.read_pin()
+            if new_val != old_val:
+                mc.postToChat("pin value: %s" % (new_val))
+            old_val = new_val
+    except KeyboardInterrupt:
+        print("stopped")
+
+

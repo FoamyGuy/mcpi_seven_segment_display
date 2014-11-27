@@ -1,51 +1,49 @@
 import time
-
 import mcpi.minecraft as minecraft
 import mcpi.vec3 as vec3
-
 from mcpi_pin import McPin
 
 
 # The location of the pins for the seven segment display.
 # YOU MUST EDIT THESE VALUES TO MATCH YOUR WORLD
-a_loc = vec3.Vec3(108,1,-137)
-b_loc = vec3.Vec3(107,1,-138)
-c_loc = vec3.Vec3(106,1,-137)
-d_loc = vec3.Vec3(105,1,-138)
-e_loc = vec3.Vec3(104,1,-137)
-f_loc = vec3.Vec3(103,1,-138)
-g_loc = vec3.Vec3(102,1,-137)
+a_loc = vec3.Vec3(80, 1, -183)
+b_loc = vec3.Vec3(79, 1, -184)
+c_loc = vec3.Vec3(78, 1, -183)
+d_loc = vec3.Vec3(77, 1, -184)
+e_loc = vec3.Vec3(76, 1, -183)
+f_loc = vec3.Vec3(75, 1, -184)
+g_loc = vec3.Vec3(74, 1, -183)
 
 
 # The location of all the pixels used in the seven segment display.
 # YOU MUST EDIT THESE VALUES TO MATCH YOUR WORLD
-a_pixels = [vec3.Vec3(106,9,-130),
-            vec3.Vec3(105,9,-130),
-            vec3.Vec3(104,9,-130)]
+a_pixels = [vec3.Vec3(78, 9, -176),
+            vec3.Vec3(77, 9, -176),
+            vec3.Vec3(76, 9, -176)]
 
-b_pixels = [vec3.Vec3(103,8,-130),
-            vec3.Vec3(103,7,-130),
-            vec3.Vec3(103,6,-130)]
+b_pixels = [vec3.Vec3(75,8,-176),
+            vec3.Vec3(75,7,-176),
+            vec3.Vec3(75,6,-176)]
 
-c_pixels = [vec3.Vec3(103,4,-130),
-            vec3.Vec3(103,3,-130),
-            vec3.Vec3(103,2,-130)]
+c_pixels = [vec3.Vec3(75,4,-176),
+            vec3.Vec3(75,3,-176),
+            vec3.Vec3(75,2,-176)]
 
-d_pixels = [vec3.Vec3(104,1,-130),
-            vec3.Vec3(105,1,-130),
-            vec3.Vec3(106,1,-130)]
+d_pixels = [vec3.Vec3(78, 1, -176),
+            vec3.Vec3(77, 1, -176),
+            vec3.Vec3(76, 1, -176)]
 
-e_pixels = [vec3.Vec3(107,2,-130),
-            vec3.Vec3(107,3,-130),
-            vec3.Vec3(107,4,-130)]
+e_pixels = [vec3.Vec3(79,4,-176),
+            vec3.Vec3(79,3,-176),
+            vec3.Vec3(79,2,-176)]
 
-f_pixels = [vec3.Vec3(107,6,-130),
-            vec3.Vec3(107,7,-130),
-            vec3.Vec3(107,8,-130)]
+f_pixels = [vec3.Vec3(79,8,-176),
+            vec3.Vec3(79,7,-176),
+            vec3.Vec3(79,6,-176)]
 
-g_pixels = [vec3.Vec3(106,5,-130),
-            vec3.Vec3(105,5,-130),
-            vec3.Vec3(104,5,-130)]
+g_pixels = [vec3.Vec3(78, 5, -176),
+            vec3.Vec3(77, 5, -176),
+            vec3.Vec3(76, 5, -176)]
 
 if __name__ == "__main__":
 
