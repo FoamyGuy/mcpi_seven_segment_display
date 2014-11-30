@@ -10,7 +10,6 @@
  left clicks as the origin point for printing the data file.
 """
 
-
 import mcpi.minecraft as minecraft
 import mcpi.block as block
 import time

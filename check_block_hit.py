@@ -1,3 +1,10 @@
+"""
+check_block_hit.py
+---------------------
+Helper script that will show the information about the
+block that you right-click with the sword equipped.
+"""
+
 import mcpi.minecraft as minecraft
 import time
 

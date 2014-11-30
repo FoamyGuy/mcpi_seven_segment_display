@@ -6,48 +6,46 @@ from mcpi_pin import McPin
 
 # The location of the pins for the seven segment display.
 # YOU MUST EDIT THESE VALUES TO MATCH YOUR WORLD
-a_loc = vec3.Vec3(80, 1, -183)
-b_loc = vec3.Vec3(79, 1, -184)
-c_loc = vec3.Vec3(78, 1, -183)
-d_loc = vec3.Vec3(77, 1, -184)
-e_loc = vec3.Vec3(76, 1, -183)
-f_loc = vec3.Vec3(75, 1, -184)
-g_loc = vec3.Vec3(74, 1, -183)
+a_loc = minecraft.Vec3(230,1,-308)
+b_loc = minecraft.Vec3(229,1,-309)
+c_loc = minecraft.Vec3(228,1,-308)
+d_loc = minecraft.Vec3(227,1,-309)
+e_loc = minecraft.Vec3(226,1,-308)
+f_loc = minecraft.Vec3(225,1,-309)
+g_loc = minecraft.Vec3(224,1,-308)
 
 
 # The location of all the pixels used in the seven segment display.
 # YOU MUST EDIT THESE VALUES TO MATCH YOUR WORLD
-a_pixels = [vec3.Vec3(78, 9, -176),
-            vec3.Vec3(77, 9, -176),
-            vec3.Vec3(76, 9, -176)]
+a_pixels = [minecraft.Vec3(228,9,-301),
+            minecraft.Vec3(227,9,-301),
+            minecraft.Vec3(226,9,-301)]
 
-b_pixels = [vec3.Vec3(75,8,-176),
-            vec3.Vec3(75,7,-176),
-            vec3.Vec3(75,6,-176)]
+b_pixels = [minecraft.Vec3(225,8,-301),
+            minecraft.Vec3(225,7,-301),
+            minecraft.Vec3(225,6,-301)]
 
-c_pixels = [vec3.Vec3(75,4,-176),
-            vec3.Vec3(75,3,-176),
-            vec3.Vec3(75,2,-176)]
+c_pixels = [minecraft.Vec3(225,4,-301),
+            minecraft.Vec3(225,3,-301),
+            minecraft.Vec3(225,2,-301)]
 
-d_pixels = [vec3.Vec3(78, 1, -176),
-            vec3.Vec3(77, 1, -176),
-            vec3.Vec3(76, 1, -176)]
+d_pixels = [minecraft.Vec3(228,1,-301),
+            minecraft.Vec3(227,1,-301),
+            minecraft.Vec3(226,1,-301)]
 
-e_pixels = [vec3.Vec3(79,4,-176),
-            vec3.Vec3(79,3,-176),
-            vec3.Vec3(79,2,-176)]
+e_pixels = [minecraft.Vec3(229,4,-301),
+            minecraft.Vec3(229,3,-301),
+            minecraft.Vec3(229,2,-301)]
 
-f_pixels = [vec3.Vec3(79,8,-176),
-            vec3.Vec3(79,7,-176),
-            vec3.Vec3(79,6,-176)]
+f_pixels = [minecraft.Vec3(229,8,-301),
+            minecraft.Vec3(229,7,-301),
+            minecraft.Vec3(229,6,-301)]
 
-g_pixels = [vec3.Vec3(78, 5, -176),
-            vec3.Vec3(77, 5, -176),
-            vec3.Vec3(76, 5, -176)]
+g_pixels = [minecraft.Vec3(228,5,-301),
+            minecraft.Vec3(227,5,-301),
+            minecraft.Vec3(226,5,-301)]
 
 if __name__ == "__main__":
-
-    old_val = 0
 
     # Create mc object.
     mc = minecraft.Minecraft.create()
@@ -60,8 +58,9 @@ if __name__ == "__main__":
     f_pin = McPin(mc, 'f', 1, f_loc)
     g_pin = McPin(mc, 'g', 1, g_loc)
 
-    while 1:
+    while True:
 
+        """
         out_str = ""
         out_str += str(a_pin.read_pin())
         out_str += str(b_pin.read_pin())
@@ -70,8 +69,8 @@ if __name__ == "__main__":
         out_str += str(e_pin.read_pin())
         out_str += str(f_pin.read_pin())
         out_str += str(g_pin.read_pin())
-
         print(out_str)
+        """
 
         if a_pin.read_pin():
             for pixel in a_pixels:
