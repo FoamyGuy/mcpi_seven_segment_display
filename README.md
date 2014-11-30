@@ -2,7 +2,7 @@ mcpi_seven_segment_display
 ==========================
 This project will show you how to create a virtual seven segment display inside of minecraft.
 
-Walkthrough Video:
+[Walkthrough Video](http://youtu.be/uBwxMlkVlZc)
 
 check_block_hit.py
 ------------------
