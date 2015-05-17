@@ -27,7 +27,7 @@ class McPin:
         self.value = value
         self.location = location
         self.mc = mc
-        self.mc.setBlock(self.location)
+        self.mc.setBlock(self.location, self.HIGH)
 
     """
     Returns the current value from the pin inside of minecraft.
